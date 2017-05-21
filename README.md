@@ -4,7 +4,7 @@
 В файл libs.min.css подключен normalize.css
 
 Подключены: 
-jquery-2.2.2
+jquery-3
 font-awesome 4.5.0
 
 В проекту содержатся файлы bootstrap, но не подключены
