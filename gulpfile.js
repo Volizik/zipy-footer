@@ -165,6 +165,15 @@ gulp.task('clear', function (callback) {
     return cache.clearAll();
 });
 
+gulp.task('svg-sprite', function () {
+
+    return gulp.src('./app/svg_sprite/*.svg')
+        .pipe(svgmin())
+        .pipe(svgstore())
+        .pipe(gulp.dest('./images'));
+
+});
+
 gulp.task('default', ['watch', 'browser-sync']);
 
 /*
