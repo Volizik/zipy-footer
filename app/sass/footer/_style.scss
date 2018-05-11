@@ -2,7 +2,7 @@
   position: relative;
   // Footer top
   &__top {
-    padding: 37px 0;
+    padding: 36px 0;
     border-bottom: 1px solid #ccc;
     @include breakpoint(max-width 740px) {
       padding: 30px 0;
@@ -35,7 +35,7 @@
   }
 
   &__form {
-    margin-bottom: 37px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@
   &__form-title {
     margin: 8px auto 27px;
     width: 100%;
-    max-width: 477px;
+    max-width: 495px;
     font-size: 18px;
     font-weight: 500;
     color: #2c2c2c;
@@ -75,7 +75,7 @@
     background-color: #f04c53;
     border: none;
     [dir='rtl'] & {
-      margin-right: 10px;
+      margin-right: 8px;
       border-radius: 25px 0 0 25px;
       @include breakpoint(max-width 650px) {
         margin: 0;
@@ -87,7 +87,7 @@
       }
     }
     [dir='ltr'] & {
-      margin-left: 10px;
+      margin-left: 8px;
       border-radius: 0 25px 25px 0;
       @include breakpoint(max-width 650px) {
         margin: 0;
@@ -140,7 +140,7 @@
     width: 100%;
     list-style-type: none;
     @include breakpoint(max-width 420px) {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
   }
   &__docs-item {
@@ -149,11 +149,17 @@
     font-size: 14px;
     text-decoration: underline;
     color: #2196f3;
-    @include breakpoint(max-width 650px) {
-      margin-bottom: 20px;
+    [dir='ltr'] & {
+      @include breakpoint(max-width 992px) {
+        margin-bottom: 18px;
+      }
+    }
+    [dir='rtl'] & {
+      @include breakpoint(max-width 650px) {
+        margin-bottom: 18px;
+      }
     }
   }
-
   &__services {
     margin: 0;
     padding: 0;
@@ -179,11 +185,20 @@
     }
   }
   &__services-item {
+    display: block;
     margin: 0 12px;
     font-size: 12px;
     text-decoration: underline;
     letter-spacing: 0.1px;
     color: #2c2c2c;
+    [dir='ltr'] & {
+      @include breakpoint(max-width 992px) {
+        margin-bottom: 18px;
+      }
+      @include breakpoint(max-width 650px) {
+        margin-bottom: 0;
+      }
+    }
     @include breakpoint(max-width 650px) {
       margin: 0;
       padding: 0 15px;
@@ -220,11 +235,14 @@
       display: none;
       @include breakpoint(max-width 650px) {
         display: flex;
+        margin-top: 4px;
+        margin-left: 2px;
       }
     }
   }
 
   &__payments {
+    margin-top: 7px;
     display: flex;
   }
   &__payments-item {
@@ -284,7 +302,7 @@
     width: 100%;
     text-align: right;
     @include breakpoint(max-width 650px) {
-      margin-top: 10px;
+      margin-top: 18px;
     }
     [dir='rtl'] & {
       text-align: right;
